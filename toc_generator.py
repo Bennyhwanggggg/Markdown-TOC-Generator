@@ -39,12 +39,14 @@ def get_content(path: str = PATH) -> List[str]:
 
 
 def generate_mark_down_table_of_content(content: List[str],
+                                        args: argparse.ArgumentParser,
                                         file_name: str = 'Table of Content',
                                         file_type: str = 'md',
                                         target_location: str = PATH):
-    contents = ['# Table of Content\n', ''] + content
     file = '{}.{}'.format(file_name, file_type)
     file = os.path.join(target_location, file)
+    file = args.save_path if args.save_path else file
+    contents = ['# Table of Content\n', ''] + content
 
     with open(file, 'w') as writer:
         writer.write('\n'.join(contents))
@@ -75,7 +77,7 @@ def main():
     parser = get_parser()
     args = parser.parse_args()
     content = get_content(args.path)
-    generate_mark_down_table_of_content(content)
+    generate_mark_down_table_of_content(content, args)
 
 
 if __name__ == '__main__':
