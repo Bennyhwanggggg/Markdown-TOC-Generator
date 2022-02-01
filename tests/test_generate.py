@@ -1,4 +1,4 @@
-from main import get_content
+from toc_generator import get_content
 
 
 def test_generate_toc():

@@ -1,36 +1,3 @@
-# Markdown-TOC-Generator
-Markdown Table of Content Generator that generator based on all markdown files from the root folder.
-
-## How to use?
-There's no external dependencies! Just clone this repository and run
-```
-python3 toc_generator.py
-```
-
-To get more info on the different options such as save path and target path.
-
-```
-python3 toc_generator.py --help
-```
-
-## Testing
-Install test dependencies
-```
-python3 -m pip install test_requirements.txt
-``` 
-
-Running the tests
-```
-pytest
-```
-
-## Example
-```
-python3 toc_generator.py -p './tests' -s './tests/Example_TOC.md'
-```
-Output:
-See [Example_TOC.md](/tests/Example_TOC.md)
-```
 # Table of Content
 
 
@@ -69,6 +36,3 @@ See [Example_TOC.md](/tests/Example_TOC.md)
 - [Inner Inner Level](Inner_Inner_Level.md#inner-inner-level)
 
 	+ [Sub Sub Heading](Inner_Inner_Level.md#sub-sub-heading)
-
-
-```
